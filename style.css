@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    /* PRIMARY */
+    --cyan: hsl(179, 62%, 43%);
+    --brightYellow: hsl(71, 73%, 54%);
+    /* NEUTRAL */
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+}
+
+/***** GENERAL *****/
+body {
+    background-color: var(--lightGray);
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    height: 100vh;
+    color: white;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    margin: 0;
+    padding: 0;
+}
+h1, h2 {
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.125em;
+}
+
+/***** CARD *****/
+.card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45% 55%;
+    box-shadow: .3em .3em 1em rgba(0,0,0,.1);
+    border-radius: .7em;
+}
+
+/* Main info */
+h1 {
+    color: var(--cyan);
+    margin-bottom: 1em;
+}
+.join-info h2 {
+    color: var(--brightYellow);
+}
+.join-info {
+    background-color: white;
+    grid-column: span 2;
+    color: var(--grayishBlue);
+    border-top-left-radius: .7em;
+    border-top-right-radius: .7em;
+    padding: 1em 4em 2em;
+}
+.join-info p {
+    margin: .5em 0;
+}
+
+/* Subscription */
+.subscription {
+    background-color: var(--cyan);
+    border-bottom-left-radius: .7em;
+    padding: 2em;
+}
+.subscription em {
+    font-style: normal;
+    font-size: 2em;
+}
+.subscription span {
+    opacity: .6;
+}
+.subscription p {
+    opacity: .9;
+    margin: .5em 0;
+}
+.btn-signup {
+    background-color: var(--brightYellow);
+    border: none;
+    padding: 1em 4em;
+    color: white;
+    border-radius: .3em;
+    width: 100%;
+    box-shadow: 0 .3em 1em rgba(0,0,0,.1);
+    margin-top: 1.5em;
+}
+
+/* Why us */
+.why-us {
+    background-color: hsl(179, 58%, 49%);
+    border-bottom-right-radius: .7em;
+    padding: 2em;
+}
+.why-us ul {
+    padding-left: 0;
+    list-style-type: none;
+    opacity: .7;
+}
+
+/***** FOOTER *****/
+footer {
+    display: none;
+}
+
+/***** RESPONSIVE *****/
+@media screen and (max-width: 600px) {
+    .content {
+        margin-top: 8em;
+        padding: 8em 0;
+    }
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 33% 33%;
+        margin: 2em;
+    }
+    .join-info {
+        grid-column: span 1;
+        padding: 1em 2em 2em;
+    }
+
+    .subscription {
+        border-bottom-left-radius: 0;
+        padding: 1em 1.5em 0;
+    }
+    .why-us {
+        border-bottom-left-radius: .7em; 
+        padding: 1em 2em;
+    }
+    .btn-signup {
+        margin-top: 3em;
+    }
+}
